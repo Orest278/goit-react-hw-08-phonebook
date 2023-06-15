@@ -4,11 +4,6 @@ import { selectVisibleContacts } from '../../redux/selectors';
 import s from './ContactLlist.module.css'
 
 function ContactList() {
-  // const contacts = useSelector(getContacts);
-  // const filterWord = useSelector(getFilter);
-  // const visibleContacts = contacts.filter(({ name }) =>
-  //   name.toLowerCase().includes(filterWord)
-  // );
   const visibleContacts = useSelector(selectVisibleContacts);
   
 
