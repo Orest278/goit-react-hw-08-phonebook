@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { lazy } from 'react';
 
 import Layout from './components/Layout';
@@ -23,8 +23,7 @@ function App() {
   const { isRefreshing } = useAuth();
 
   return (
-     <Router>
-    {!isRefreshing && (
+    !isRefreshing && (
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -53,8 +52,7 @@ function App() {
           <Route path="*" element={<Home />} />
         </Route>
       </Routes>
-      )}
-      </Router>
+      )
   );
 }
 
